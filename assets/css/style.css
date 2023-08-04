@@ -71,6 +71,34 @@
     padding: 5px;
 }
 
+.input-group{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.input-group span{
+    padding: 4px;
+}
+
+.input-group input{
+    padding: 4px;
+    width: 100%;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+
 .input-field input:focus{
     outline: none;
 }

@@ -16,17 +16,34 @@
             <div id="input_box">
                 <div class="input-field">
                     <label for="value">Valor Inicial (capital):</label>
-                    <input type="number" name="" id="value">
+                    <div class="input-group"> 
+                        <span class="input-group-text">R$</span>
+                        <input type="number" placeholder="0,00" name="" id="value">
+                    </div>
                 </div>
 
                 <div class="input-field">
-                    <label for="fee">Taxa de Juros a.m:</label>
-                    <input type="number" name="" id="fee">
+                    <label for="value">Aplicação Mensal:</label>
+                    <div class="input-group"> 
+                        <span class="input-group-text">R$</span>
+                        <input type="number" placeholder="0,00" name="" id="monthly">
+                    </div>
                 </div>
 
                 <div class="input-field">
-                    <label for="time">Tempo de Redimento a.m:</label>
-                    <input type="number" name="" id="time">
+                    <label for="fee">Taxa de Juros a.m.:</label>
+                    <div class="input-group"> 
+                        <input type="number" placeholder="0,00" name="" id="fee">
+                        <span class="input-group-text"> %</span>
+                    </div>
+                </div>
+
+                <div class="input-field">
+                    <label for="time">Tempo de Redimento a.m.:</label>
+                    <div class="input-group"> 
+                        <input type="number" placeholder="0" name="" id="time">
+                        <span class="input-group-text"> meses</span>
+                    </div>
                 </div>
             </div>
             <section id="partial_result">
