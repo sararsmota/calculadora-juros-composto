@@ -1,6 +1,7 @@
 # Calculadora Juros Compostos
 
-![image](https://github.com/sararoseanemota/calculadora-juros-composto/assets/80297582/4ceadd56-cc07-47a4-a21c-6d48a1e556ba)
+![image](https://github.com/sararoseanemota/calculadora-juros-composto/assets/80297582/a50d8967-de44-44b7-927c-f89b7ad94f16)
+
 
 Tecnologias utilizadas:
 - HTML
