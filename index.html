@@ -31,10 +31,14 @@
                 </div>
 
                 <div class="input-field">
-                    <label for="fee">Taxa de Juros a.m.:</label>
-                    <div class="input-group"> 
+                    <label for="fee">Taxa de Juros:</label>
+                    <div class="input-group">
+                        <span class="input-group-text">%</span>
                         <input type="number" placeholder="0,00" name="" id="fee">
-                        <span class="input-group-text"> %</span>
+                        <select class="interest-select" id="interest-rate-period">
+                            <option value="monthly">mensal</option>
+                            <option value="yearly">anual</option>
+                        </select>
                     </div>
                 </div>
 

@@ -1,7 +1,15 @@
+function togglePeriod(period, value) {
+  const exponent = period === "monthly" ? 1 / 12 : 12
+  const result = Math.pow(1 + value / 100, exponent) - 1
+  return result * 100
+}
+
 //calcular os valores inseridos
 document.getElementById('calculate').addEventListener('click', function(){
     const value = document.getElementById('value').value;
-    const fee = (document.getElementById('fee').value);
+    const feeValue = (document.getElementById('fee').value);
+    const ratePeriod = document.getElementById('interest-rate-period').value;
+    const fee = ratePeriod === "monthly" ? feeValue : togglePeriod("monthly", feeValue)
     const time = document.getElementById('time').value;
     const monthly = document.getElementById('monthly').value;
 
@@ -15,6 +23,18 @@ document.getElementById('calculate').addEventListener('click', function(){
     document.getElementById('total_gain').innerHTML =  formatter.format(total_gain);
     document.getElementById('total').innerHTML = formatter.format(total);
 });
+
+document.getElementById('interest-rate-period').addEventListener('change', () => {
+  const el = document.getElementById('interest-rate-period')
+  const interestEl = document.getElementById('fee')
+  const value = interestEl.value
+
+  if (!value) return
+
+  const newInterest = togglePeriod(el.value, value)
+
+  interestEl.value = newInterest.toFixed(2)
+})
 
 //função para formatar na moeda Real
 const formatter = new Intl.NumberFormat("pt-BR", {
